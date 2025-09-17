@@ -1,3 +1,9 @@
+""""
+Implementation of Rosenblatt's Perceptron algorithm on a toy 2D dataset.
+Plots the decision boundary and weight vector after each update (mistake).
+Author: Tales Imbiriba
+Date: 2025-08-10
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt
