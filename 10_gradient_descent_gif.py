@@ -56,7 +56,7 @@ os.makedirs(out_dir, exist_ok=True)
 # initialize point
 xy = torch.tensor([2.5, 2.5], dtype=torch.float32, requires_grad=True)
 # optimizer = SGDOptimizer([xy], lr=0.01, momentum=0.9, nesterov=False)
-optimizer = SGDOptimizer([xy], lr=0.5, momentum=0.0, nesterov=False)
+optimizer = SGDOptimizer([xy], lr=0.01, momentum=0.9, nesterov=True)
 # optimizer = SGDOptimizer([xy], lr=0.5, momentum=0.0, nesterov=False)
 # store frames for GIF
 frames = []
@@ -70,7 +70,7 @@ for epoch in range(50):
     plt.figure(figsize=(6, 6))
     
     # make plot surface using plot_surface
-    plt.plot_surface = True  # set to True for 3D surface plot
+    plt.plot_surface = False  # set to True for 3D surface plot
     if plt.plot_surface:
         from mpl_toolkits.mplot3d import Axes3D
         fig = plt.figure(figsize=(8, 6))
